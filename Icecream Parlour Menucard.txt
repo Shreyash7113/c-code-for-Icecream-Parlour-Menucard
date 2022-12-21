@@ -1,0 +1,331 @@
+#include<iostream>
+#include<string.h>
+#include<conio.h>
+using namespace std;
+class welcome
+{
+	string name;
+    int age;
+	public:
+		void wel()
+		{
+			
+			cout<<"\t\t\tWelcome to the Icecream Parlour\n"<<endl;
+            cout<<"\t\t\tHope you are enjoying\n"<<endl;
+			cout<<"\t\t\tEnter your name : ";
+			cin>>name;
+			cout<<"\n\nHELLO"<<"   "<<name<<endl;
+			cout<<"\nWHAT WOULD YOU LIKE TO ORDER ?\n\n";
+            cout<<"Enter your age";
+            cin>>age;
+
+		}
+};
+class menu_card:public welcome
+{
+	int choice=0,pchoice,pchoice1, quantity;
+	public:
+      void order()
+      {
+		cout<<"\t\t\t\t-------------MENU CARD-------------\n\n";
+
+	cout<<"1) Cone\n";
+	cout<<"2) Cup\n";
+	cout<<"3) Double scoop\n";
+	cout<<"4) Gelato\n";
+	cout<<"5) premium\n\n";
+	
+	cout<<"\nPlease Enter your Choice: ";
+	cin>>choice;
+
+	if(choice==1)
+	 {
+		cout<<"\n1) "<<"Chocolate Flavour"<<"\n";
+		cout<<"2) "<<"Vanilla Flavour"<<"\n";
+		cout<<"3) "<<"Tuti Fruity Flavour"<<"\n";
+        cout<<"4) Pineapple Flavour\n";
+		cout<<"\nPlease Enter which Flavour would you like to have?:";
+		cin>>pchoice;
+		
+		if(pchoice>=1 && pchoice<=5)
+		{
+			cout<<"\n1) Small Rs.50\n"<<"2) Regular Rs.70\n"<<"3) Large Rs.80\n";
+			cout<<"\nChoose Size Please:";
+			cin>>pchoice1;
+			if(pchoice1>=1 && pchoice1<=4)
+			cout<<"\nPlease Enter Quantity: ";
+			cin>>quantity;
+			switch(pchoice1)
+			{
+			case 1: choice = 50*quantity;
+			break;
+
+			case 2: choice = 70*quantity;
+			break;
+
+			case 3: choice =80*quantity;
+			break;
+			}
+			system("CLS");
+			switch (pchoice1)
+			{
+			 case 1:
+			 cout<<"\t\t\t--------Your Order---------\n";
+			 cout<<""<<quantity<<" "<<" Chocolate Flavour ";
+			 cout<<"\nYour Total Bill is : "<<choice<<"\nYour Order Will be delivered in 10 Minutes";
+			 cout<<"\n\nThank you For Ordering From KS CAFE\n";
+             cout<<"\n\nHAVE A NICE DAY \n";
+			 break;
+			 
+			 case 2:
+			 cout<<"\t\t--------Your Order---------\n";
+			 cout<<""<<quantity<<"  "<<"Vanilla Flavour";
+			 cout<<"\nYour Total Bill is : "<<choice<<"\nYour Order Will be delivered in 10 Minutes";
+			 cout<<"\nThank you For Ordering From KS CAFE\n";
+            cout<<"\n\nHAVE A NICE DAY";
+
+			 break;
+			 
+			 case 3:
+			 cout<<"\t\t--------Your Order---------\n";
+			 cout<<""<<quantity<<" "<<"Tuti Fruity Flavour";
+			 cout<<"\nYour Total Bill is : "<<choice<<"\nYour Order Will be delivered in 10 Minutes";
+			 cout<<"\nThank you For Ordering From KS CAFE \n";
+             cout<<"\n\nHAVE A NICE DAY";
+			 break;
+
+             case 4:
+             cout<<"\t\t--------Your Order---------\n";
+			 cout<<""<<quantity<<" "<<"Pineapple Flavour";
+			 cout<<"\nYour Total Bill is : "<<choice<<"\nYour Order Will be delivered in 10 Minutes";
+			 cout<<"\nThank you For Ordering From KS CAFE \n";
+             cout<<"\n\nHAVE A NICE DAY";
+			 break;
+			}
+		}
+	 }
+  else if(choice==2)
+	 {
+		cout<<"\n1) "<<"Chocolate Flavour"<<"\n";
+		cout<<"2) "<<"Vanilla Flavour"<<"\n";
+		cout<<"3) "<<"Tuti Fruity Flavour"<<"\n";
+        cout<<"4) Pineapple Flavour\n";
+		cout<<"\nPlease Enter which Flavour would you like to have?:";
+		cin>>pchoice1;
+		if(pchoice1>=1 && pchoice1<=4)
+		{
+			cout<<"\nPlease Enter Quantity: ";
+			cin>>quantity;
+			switch(pchoice1)
+			{
+			case 1: choice = 50*quantity;
+			break;
+
+			case 2: choice = 70*quantity;
+			break;
+
+			case 3: choice = 60*quantity;
+			break;
+
+            case 4: choice = 90*quantity;
+            break;
+
+			}
+			system("CLS");
+			switch (pchoice1)
+			{
+			 case 1:
+			 cout<<"\t\t--------Your Order---------\n";
+			 cout<<""<<quantity<<" "<<"Chocolate Flavour";
+			 cout<<"\nYour Total Bill is : "<<choice<<"\nYour Order Will be delivered in 10 Minutes";
+			 cout<<"\nThank you For Ordering From KS CAFE \n";
+             cout<<"\n\nHAVE A NICE DAY";	
+			 break;
+			 case 2:
+			 cout<<"\t\t--------Your Order---------\n";
+			 cout<<""<<quantity<<"  "<<"Vanilla Flavour";
+			 cout<<"\nYour Total Bill is : "<<choice<<"\nYour Order Will be delivered in 10 Minutes";
+			 cout<<"\nThank you For Ordering From  KS CAFE\n";
+             cout<<"\n\nHAVE A NICE DAY";				
+			 break;
+			 case 3:
+			 cout<<"\t\t--------Your Order---------\n";
+			 cout<<""<<quantity<<" "<<"Tuti Fruity Flavour";
+			 cout<<"\nYour Total Bill is : "<<choice<<"\nYour Order Will be delivered in 10 Minutes";
+			 cout<<"\nThank you For Ordering From KS CAFE\n";
+             cout<<"HAVE A NICE DAY";
+			 break;
+             case 4:
+             cout<<"\t\t--------Your Order---------\n";
+			 cout<<""<<quantity<<" "<<"Pineapple Flavour";
+			 cout<<"\nYour Total Bill is : "<<choice<<"\nYour Order Will be delivered in 10 Minutes";
+			 cout<<"\nThank you For Ordering From KS CAFE\n";
+             cout<<"HAVE A NICE DAY";
+             break;
+			}
+		}
+     }
+     else if(choice==3)
+	 {
+		cout<<"\n1  "<<"Chocolate Flavour"<<" Rs.100"<<"\n";
+		cout<<"2  "<<"Vanilla Flavour "<<" Rs.140"<<"\n";
+		cout<<"3  "<<"Strawberry Flavour"<<" Rs.180"<<"\n";
+		cout<<"\nPlease Enter which Sandwich you would like to have?:";
+		cin>>pchoice1;
+		if(pchoice1>=1 && pchoice1<=3)
+		{
+			cout<<"\nPlease Enter Quantity: ";
+			cin>>quantity;
+			switch(pchoice1)
+			{
+			case 1: choice = 100*quantity;
+			break;
+
+			case 2: choice = 140*quantity;
+			break;
+
+			case 3: choice = 180*quantity;
+			break;
+
+			}
+			system("CLS");
+			switch (pchoice1)
+			{
+			 case 1:
+			 cout<<"\t\t--------Your Order---------\n";
+			 cout<<""<<quantity<<" "<<"Chocolate Flavour";
+			 cout<<"\nYour Total Bill is : "<<choice<<"\nYour Order Will be delivered in 10 Minutes";
+			 cout<<"\nThank you For Ordering From KS CAFE\n";
+             cout<<"\n\nHAVE A NICE DAY";
+			 break;
+			 case 2:
+			 cout<<"\t\t--------Your Order---------\n";
+			 cout<<""<<quantity<<"  "<<"Vanilla Flavour" ;
+			 cout<<"\nYour Total Bill is : "<<choice<<"\nYour Order Will be delivered in 10 Minutes";
+			 cout<<"\nThank you For Ordering From KS CAFE \n";
+             cout<<"\n\nHAVE A NICE DAY";
+			 break;
+			 case 3:
+			 cout<<"\t\t--------Your Order---------\n";
+			 cout<<""<<quantity<<" "<<"Strawberry Flavour";
+			 cout<<"\nYour Total Bill is"<<choice<<"\nYour Order Will be delivered in 10 Minutes";
+			 cout<<"\nThank you For Ordering From  KS CAFE\n";
+             cout<<"\n\nHAVE A NICE DAY";
+			 break;
+			}
+			}
+			}
+else if(choice==4)
+	 {
+		cout<<"\n1 "<<"Chocolate Flavour"<<" Rs.170"<<"\n";
+		cout<<"2 "<<"Vanilla Flavour"<<" Rs.150"<<"\n";
+		cout<<"3 "<<"Strawberry Flavour"<<" Rs.100"<<"\n";
+		
+		cout<<"\nPlease Enter which you would like to have?: ";
+		cin>>pchoice1;
+		if(pchoice1>=1 && pchoice1<=3)
+		{
+			cout<<"\nEnter the quantity: ";
+			cin>>quantity;
+			switch(pchoice1)
+			{
+			case 1: choice = 170*quantity;
+			break;
+			case 2: choice = 150*quantity;
+	        break;
+			case 3: choice = 100*quantity;
+	        break;
+			}
+			system("CLS");
+			switch (pchoice1)
+			{
+			 case 1:
+			 cout<<"\t\t--------Your Order---------\n";
+			 cout<<""<<quantity<<" "<<"Chocolate Flavour";
+			 cout<<"\nYour Total Bill is : "<<choice<<"\nYour Order Will be delivered in 10 Minutes";
+			 cout<<"\nThank you For Ordering From KS CAFE\n";
+             cout<<"\n\nHAVE A NICE DAY";
+			 break;
+			 case 2:
+			 cout<<"\t\t--------Your Order---------\n";
+			 cout<<""<<quantity<<"  "<<"Vanilla Flavour";
+			 cout<<"\nYour Total Bill is : "<<choice<<"\nYour Order Will be delivered in 10 Minutes";
+			 cout<<"\nThank you For Ordering From KS CAFE\n";
+             cout<<"\n\nHAVE A NICE DAY";
+			 break;
+			 case 3:
+			 cout<<"\t\t--------Your Order---------\n";
+			 cout<<""<<quantity<<" "<<"Strawberry Flavour";
+			 cout<<"\nYour Total Bill is : "<<choice<<"\nYour Order Will be delivered in 10 Minutes";
+			 cout<<"\nThank you For Ordering From KS CAFE\n";
+             cout<<"\n\nHAVE A NICE DAY";
+			 break;
+			}
+        }
+ }
+ else if(choice==5)
+	 {
+		cout<<"\n1 "<<"Belgium Chocolate"<<" Rs.200"<<"\n";
+		cout<<"2 "<<"American Butterscotch chocolate"<<" Rs.250"<<"\n";
+		cout<<"3 "<<"Oreo crush Chocolate"<<" Rs.300"<<"\n";
+		cout<<"\nPlease Enter which flavour you would like to have?:";
+		cin>>pchoice1;
+		if(pchoice1>=1 && pchoice1<=3)
+		{
+			cout<<"\nPlease Enter Quantity: ";
+			cin>>quantity;
+			switch(pchoice1)
+			{
+			case 1: choice = 200*quantity;
+			break;
+
+			case 2: choice = 250*quantity;
+			break;
+
+			case 3: choice = 300*quantity;
+			break;
+
+			}
+			system("CLS");
+			switch (pchoice1)
+			{
+			 case 1:
+			 cout<<"\t\t--------Your Order---------\n";
+			 cout<<""<<quantity<<" "<<"Belgium Chocolate";
+			 cout<<"\nYour Total Bill is : "<<choice<<"\nYour Order Will be delivered in 10 Minutes";
+			 cout<<"\nThank you For Ordering From us \n";
+             cout<<"\n\nHAVE A NICE DAY";
+			 break;
+			 case 2:
+			 cout<<"\t\t--------Your Order---------\n";
+			 cout<<""<<quantity<<"  "<<"American Butterscotch chocolate";
+			 cout<<"\nYour Total Bill is : "<<choice<<"\nYour Order Will be delivered in 10 Minutes";
+			 cout<<"\nThank you For Ordering From us\n";
+             cout<<"\n\nHAVE A NICE DAY";
+			 break;
+			 case 3:
+			 cout<<"\t\t--------Your Order---------\n";
+			 cout<<""<<quantity<<" "<<"Oreo crush Chocolate";
+			 cout<<"\nYour Total Bill is: "<<choice<<"\nYour Order Will be delivered in 10 Minutes";
+			 cout<<"\nThank you For Ordering From us\n";
+            cout<<"\n\nHAVE A NICE DAY";
+			 break;
+			}
+		
+			}
+			}
+
+			else
+			{
+				system("CLS");
+				cout<<"Please Select Right Option: \n";
+			}
+}
+};
+int main()
+{
+	menu_card m;
+	m.wel();
+	m.order();
+	return 0;
+}
